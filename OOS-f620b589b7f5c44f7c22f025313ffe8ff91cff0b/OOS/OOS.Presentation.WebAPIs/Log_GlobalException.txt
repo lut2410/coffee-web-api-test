@@ -1,0 +1,24 @@
+Code: 500
+Stack Trace:    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at OOS.Infrastructure.Mongodb.MongoDbRepository.Create[TDocument](TDocument document) in D:\LT\Web\Code\coffee-test-api\OOS-f620b589b7f5c44f7c22f025313ffe8ff91cff0b\OOS\OOS.Infrastructure.Mongodb\MongoDbRepository.cs:line 55
+   at OOS.Presentation.ApplicationLogic.Tables.TablesBusinessLogic.CreateTable(Table table) in D:\LT\Web\Code\coffee-test-api\OOS-f620b589b7f5c44f7c22f025313ffe8ff91cff0b\OOS\OOS.Presentation.ApplicationLogic\Tables\TablesBusinessLogic.cs:line 47
+   at OOS.Presentation.WebAPIs.Controllers.TableController.Post(Table table) in D:\LT\Web\Code\coffee-test-api\OOS-f620b589b7f5c44f7c22f025313ffe8ff91cff0b\OOS\OOS.Presentation.WebAPIs\Controllers\TableController.cs:line 42
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+Message: A write operation resulted in an error.
+  E11000 duplicate key error index: coffe-web.Table.$_id_ dup key: { : "2" }

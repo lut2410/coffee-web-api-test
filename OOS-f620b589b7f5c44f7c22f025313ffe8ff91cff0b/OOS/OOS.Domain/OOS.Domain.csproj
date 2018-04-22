@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ProductCategories\**" />
+    <EmbeddedResource Remove="ProductCategories\**" />
+    <None Remove="ProductCategories\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Products\Product.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Carts\" />
+    <Folder Include="Users\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OOS.Infrastructure.Mongodb\OOS.Infrastructure.Mongodb.csproj" />
+    <ProjectReference Include="..\OOS.Infrastructure\OOS.Infrastructure.csproj" />
+    <ProjectReference Include="..\OOS.Shared\OOS.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
