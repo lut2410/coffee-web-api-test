@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOS.Presentation.ApplicationLogic.Products.Messages
+namespace OOS.Presentation.ApplicationLogic.CategoryFoods.Messages
 {
-    public class CreateProductResponse : ResponseBase
+    public class EditCategoryFoodResponse : ResponseBase
     {
     }
 }

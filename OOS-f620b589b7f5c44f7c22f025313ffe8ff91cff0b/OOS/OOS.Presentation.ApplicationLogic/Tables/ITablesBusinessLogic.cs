@@ -1,5 +1,4 @@
-﻿using OOS.Domain.Products.Models;
-using OOS.Domain.Tables.Models;
+﻿using OOS.Domain.Tables.Models;
 using OOS.Infrastructure.Mongodb;
 using OOS.Presentation.ApplicationLogic.Tables.Messages;
 using System;

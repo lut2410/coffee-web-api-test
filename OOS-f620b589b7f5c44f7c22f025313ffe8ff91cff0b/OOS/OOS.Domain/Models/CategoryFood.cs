@@ -3,10 +3,10 @@ using OOS.Infrastructure.Mongodb;
 using OOS.Shared.Enums;
 using System.ComponentModel.DataAnnotations;
 
-namespace OOS.Domain.Categories.Models
+namespace OOS.Domain.CategoryFoods.Models
 {
     [BsonIgnoreExtraElements]
-    public class Category : IAggregateRoot
+    public class CategoryFood : IAggregateRoot
     {
         [Required]
         public string Id { get; set; }
@@ -16,7 +16,6 @@ namespace OOS.Domain.Categories.Models
  
         public string Description { get; set; }
 
-        public CategoryStatus Status { get; set; }    
     }
    
 }

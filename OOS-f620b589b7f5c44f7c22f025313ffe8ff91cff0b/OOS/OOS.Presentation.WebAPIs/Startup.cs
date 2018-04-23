@@ -2,13 +2,12 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OOS.Presentation.ApplicationLogic.Products;
 using OOS.Infrastructure.Mongodb;
 using Swashbuckle.AspNetCore.Swagger;
 using OOS.Presentation.WebAPIs.Configs;
-using OOS.Presentation.ApplicationLogic.Categories;
 using OOS.Presentation.WebAPIs.Filters;
 using OOS.Presentation.ApplicationLogic.Tables;
+using OOS.Presentation.ApplicationLogic.CategoryFoods;
 
 namespace OOS.Presentation.WebAPIs
 {
@@ -30,8 +29,8 @@ namespace OOS.Presentation.WebAPIs
                 options.Filters.Add(typeof(GlobalExceptionFilter));
             });
 
-            services.AddTransient<IProductsBusinessLogic, ProductsBusinessLogic>();
             services.AddTransient<ITablesBusinessLogic, TablesBusinessLogic>();
+            services.AddTransient<ICategoryFoodsBusinessLogic, CategoryFoodsBusinessLogic>();
             services.AddTransient<IMongoDbRepository, MongoDbRepository>(n => new MongoDbRepository(Configuration.GetValue<string>("MongoDb:DefaultConnectionString")));            
 
             AutoMapperConfig.Configure(services);

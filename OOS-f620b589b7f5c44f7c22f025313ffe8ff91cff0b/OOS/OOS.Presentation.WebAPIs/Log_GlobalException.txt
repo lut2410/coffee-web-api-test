@@ -1,9 +1,6 @@
 Code: 500
-Stack Trace:    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
-   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
-   at OOS.Infrastructure.Mongodb.MongoDbRepository.Create[TDocument](TDocument document) in D:\LT\Web\Code\coffee-test-api\OOS-f620b589b7f5c44f7c22f025313ffe8ff91cff0b\OOS\OOS.Infrastructure.Mongodb\MongoDbRepository.cs:line 55
-   at OOS.Presentation.ApplicationLogic.Tables.TablesBusinessLogic.CreateTable(Table table) in D:\LT\Web\Code\coffee-test-api\OOS-f620b589b7f5c44f7c22f025313ffe8ff91cff0b\OOS\OOS.Presentation.ApplicationLogic\Tables\TablesBusinessLogic.cs:line 47
-   at OOS.Presentation.WebAPIs.Controllers.TableController.Post(Table table) in D:\LT\Web\Code\coffee-test-api\OOS-f620b589b7f5c44f7c22f025313ffe8ff91cff0b\OOS\OOS.Presentation.WebAPIs\Controllers\TableController.cs:line 42
+Stack Trace:    at OOS.Presentation.ApplicationLogic.Tables.TablesBusinessLogic.GetTable(String idTable) in D:\LT\Web\Code\coffee-web-test-api\OOS-f620b589b7f5c44f7c22f025313ffe8ff91cff0b\OOS\OOS.Presentation.ApplicationLogic\Tables\TablesBusinessLogic.cs:line 37
+   at OOS.Presentation.WebAPIs.Controllers.TableController.Get(String id) in D:\LT\Web\Code\coffee-web-test-api\OOS-f620b589b7f5c44f7c22f025313ffe8ff91cff0b\OOS\OOS.Presentation.WebAPIs\Controllers\TableController.cs:line 34
    at lambda_method(Closure , Object , Object[] )
    at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
@@ -20,5 +17,4 @@ Stack Trace:    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument docu
    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
-Message: A write operation resulted in an error.
-  E11000 duplicate key error index: coffe-web.Table.$_id_ dup key: { : "2" }
+Message: Object reference not set to an instance of an object.

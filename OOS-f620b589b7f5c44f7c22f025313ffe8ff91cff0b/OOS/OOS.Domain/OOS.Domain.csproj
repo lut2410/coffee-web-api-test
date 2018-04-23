@@ -5,17 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Carts\**" />
     <Compile Remove="ProductCategories\**" />
+    <EmbeddedResource Remove="Carts\**" />
     <EmbeddedResource Remove="ProductCategories\**" />
+    <None Remove="Carts\**" />
     <None Remove="ProductCategories\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Products\Product.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Carts\" />
+    <Folder Include="DTO\" />
     <Folder Include="Users\" />
   </ItemGroup>
 
